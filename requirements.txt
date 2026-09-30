@@ -1,0 +1,18 @@
+# Service
+fastapi>=0.115
+uvicorn>=0.30
+python-multipart>=0.0.9   # FastAPI UploadFile/Form (dataset uploads) requires it at runtime
+pandas>=2.0
+openpyxl>=3.1             # pandas.read_excel engine for .xlsx uploads
+xlrd>=2.0                 # pandas.read_excel engine for legacy .xls uploads
+openai>=1.30              # AzureOpenAI client behind every LLM-as-judge (service/judges/)
+azure-identity>=1.17      # keyless Azure OpenAI access (managed identity / local az login)
+azure-cosmos>=4.7         # Cosmos storage backend (EVAL_STORAGE=cosmos)
+langsmith>=0.1            # storage backend (service/storage/) AND tracing (service/tracing.py)
+msal>=1.28                # Entra SSO — confidential-client auth-code redemption (service/auth.py)
+python-dotenv>=1.0
+requests>=2.31
+reportlab>=4.4,<5         # paginated PDF result reports; includes embedded Vera fonts
+
+# UI
+streamlit==1.62.0

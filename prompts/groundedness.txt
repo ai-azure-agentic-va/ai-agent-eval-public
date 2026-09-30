@@ -1,0 +1,21 @@
+
+Retrieved evidence: {context}
+Agent answer: {response}
+Measure faithfulness: identify factual claims, then estimate the fraction supported
+by the retrieved evidence. 1.0 = all supported; 0.8 = at least 80% supported with no
+major invented conclusion; 0.5 = about half supported; 0.0 = none supported.
+Check internal consistency of the evidence: a summary's causal claim is not
+supported when its detailed activity records show the opposite failure direction.
+Detailed activity observations take precedence over conflicting narrative summary
+prose. An answer that correctly explains those observations and rejects the
+summary's unsupported conclusion is grounded; do not deduct for disagreeing with
+that summary. This precedence applies only where detailed evidence resolves the
+conflict, not where the source data itself remains ambiguous.
+For example, 'the parent failed because its child failed' supports child-to-parent
+propagation; it does NOT support 'the parent's failure spread to its child'.
+If the answer asserts both, its central diagnosis is contradictory and must score
+below 0.8 even if the same contradiction was repeated in a retrieved summary.
+An unsupported central claim must score below 0.8, regardless of trivial supported
+claims. Without evidence, an honest absence report with no invented facts scores
+1.0; substantive unsupported assertions score 0.0.
+Output JSON: {{"groundedness": 0.0, "groundedness_reason": "..."}}

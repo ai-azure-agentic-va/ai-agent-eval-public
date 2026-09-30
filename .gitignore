@@ -1,0 +1,41 @@
+# Local credentials; keep only the placeholder template in Git.
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+.streamlit/secrets.*.toml
+.azure/
+.aws/
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Python environments, caches, and build output.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+build/
+dist/
+*.egg-info/
+
+# Runtime output and machine-local files.
+logs/
+*.log
+.DS_Store
+
+# Local evaluation data.
+/datasets/
+/*.xlsx
+/*.xls
+/*.csv

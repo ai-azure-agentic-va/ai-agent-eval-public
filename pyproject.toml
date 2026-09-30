@@ -1,0 +1,13 @@
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [".venv"]
+
+[tool.ruff.lint]
+# F = pyflakes (undefined/unused names — the dead-code guard), E/W = pycodestyle,
+# I = import ordering. Keep the set small so `ruff check` stays a signal, not a chore.
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]  # long lines: prompts and log messages are clearer unwrapped
+
+[tool.ruff.lint.isort]
+known-first-party = ["prompts", "service", "ui"]

@@ -1,0 +1,5 @@
+
+Reference (what the test author says a correct answer must state — use it only to
+judge whether the response's substance is a genuine absence report or substituted
+content; do not penalize wording differences):
+{reference}

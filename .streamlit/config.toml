@@ -1,0 +1,13 @@
+# Light theme: dark-blue primary, near-white background.
+[theme]
+base = "light"
+primaryColor = "#003b75"
+backgroundColor = "#f9fafb"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#111827"
+# White widgets on white cards are invisible without borders:
+borderColor = "#d1d5db"
+showWidgetBorder = true
+
+[browser]
+gatherUsageStats = false

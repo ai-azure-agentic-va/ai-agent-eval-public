@@ -1,0 +1,27 @@
+
+Question: {question}
+Reference criteria (not retrieved evidence): {reference}
+Retrieved context: {context}
+Agent answer: {response}
+Measure the sufficiency of retrieved information to answer the question, not how
+well the agent used it. 1.0 = all information needed is present; 0.8 = essential
+information present with only minor gaps; 0.5 = partially sufficient; 0.0 = empty
+or irrelevant context. Do not assume a lookup succeeded if no evidence is shown.
+Assess the factual premise before demanding positive records. Verified absence
+for the exact requested entity and relevant bounded time window can be sufficient
+to answer that no matching/latest run or parent/child execution can be established
+within that window. If the reference permits this outcome, assess only that
+supported branch: do not require a run ID, parent ID, or evidence from all time
+when the relevant successful query returned no matches. Do not infer that an
+entity never existed or never ran from a bounded absence result.
+The reference and agent answer are NOT retrieval evidence. Empty context, a
+refusal, denied/failed/incomplete lookup, a different pipeline/factory, or
+contradictory identifiers do not establish verified absence for the target.
+Copy identifiers literally when comparing evidence to the question: hyphens and
+underscores are different characters. Do not mentally correct a pipeline name or
+resolve contradictory exists/does-not-exist statements. If the only absence
+evidence has a central identifier or existence contradiction, retrieval must
+score below 0.8; uncertainty about the target is not a minor omission.
+Judge sufficiency separately from precision: extra information does not make
+adequate relevant evidence insufficient; missing or contradictory essential facts do.
+Output JSON: {{"retrieval_score": 0.0, "reasoning": "..."}}

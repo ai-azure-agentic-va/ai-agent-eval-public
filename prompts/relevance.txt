@@ -1,0 +1,8 @@
+
+Question: {question}
+Agent answer: {response}
+Measure whether the response addresses the actual question, independent of factual
+correctness. 1.0 = direct and complete; 0.8 = addresses the central request with
+minor gaps; 0.5 = on topic but materially incomplete/generic; 0.0 = entirely off
+topic. A clear on-topic refusal or honest absence report can be fully relevant.
+Output JSON: {{"relevance": 0.0, "relevance_reason": "..."}}

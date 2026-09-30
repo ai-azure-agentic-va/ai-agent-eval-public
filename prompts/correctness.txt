@@ -1,0 +1,20 @@
+
+Question: {question}
+Reference answer: {reference}
+Retrieved evidence: {context}
+Agent answer: {response}
+Measure correctness against the reference's required facts and explicit failure
+conditions. 1.0 = all required facts correct; 0.8 = correct substance with only a
+minor omission; 0.5 = some correct facts but material gaps; 0.0 = contradictory,
+entirely incorrect, or an explicit disqualifying failure condition is triggered.
+Do not reward plausible invented dynamic values as verified facts.
+If the reference allows alternative outcomes (e.g. a verified absence), use only the
+branch supported by retrieved evidence for the named entity and searched time
+window. A verified no-runs result may fully satisfy that branch; it is not a
+failure merely because an execution tree cannot be produced. An empty context,
+lookup error, generic refusal, or unsupported claim of no runs is not verification.
+Do not demand facts from mutually exclusive branches or substitute another entity.
+For causality, distinguish the execution hierarchy from failure propagation.
+Several failed parent/child runs alone do not prove a parent caused its children
+to fail. An answer contradicting the evidenced cause cannot receive a passing score.
+Output JSON: {{"correctness_score": 0.0, "reasoning": "..."}}
